@@ -6,6 +6,7 @@ from oauth2client.client import flow_from_clientsecrets
 from oauth2client.file import Storage
 from oauth2client.tools import argparser, run_flow
 
+#Sets up connection to Youtube API.
 CLIENT_SECRETS_FILE = "credentials.json"
 
 MISSING_CLIENT_SECRETS_MESSAGE = """
@@ -34,8 +35,12 @@ if credentials is None or credentials.invalid:
 
 youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION,http=credentials.authorize(httplib2.Http()))
 
+#Update the playlist ID here.
 playlist_response = youtube.playlistItems().list(part="snippet,contentDetails,id,status",playlistId="INSERTPLAYLISTID", maxResults=50)
 
+#Puts all of the video IDs in a playlist into a list.
 video_ids = [playlist_response.execute()['items'][x]['contentDetails']['videoId'] for x in range(0,len(playlist_response.execute()['items']))]
-print(video_ids) #use these to push the title and description update to each video in program order appearance
+print(video_ids) 
+
+#Use the video IDs to push the video titles and Youtube descriptions to each video's metadata.
 
