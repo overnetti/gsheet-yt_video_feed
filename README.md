@@ -61,3 +61,7 @@ The USENIX Association is an advanced computing systems nonprofit organization, 
 2. `pip install httplib2`
 3. `pip install os`
 4. Refer to Google API documentation for set up: https://developers.google.com/youtube/v3
+
+## Future Improvements
+1. The `video-feed-importer.py` should take the program page or technical sessions link as an input.
+2. Project should have an .exe file for a smooth user experience.
