@@ -1,6 +1,7 @@
 # Google Sheet Presentation Tracker Automator and Youtube updater
 
 ## Introduction
+This is a replicated copy of my work at USENIX. This does not accurately represent private data at USENIX.
 #### `video-feed-importer.py`
 The python script `video-feed-importer.py` creates a Google Sheet for the USENIX Association with columns for the nodes, titles, authors, and abstracts from the program or technical sessions page. This creates a Presentation Tracker for the non-profit that allows team members to track presentations through the conference life cycle and ultimately prepare the presentations for posting to Youtube after the conference has concluded.
 
